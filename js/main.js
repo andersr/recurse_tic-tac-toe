@@ -12,18 +12,9 @@ var board_size          = 3,
     current_mark,
     winning_player;
 
-//GAME BOARD
-function gameSquare(state) {
-  this.state = state;
-};
 function createEmptyGameBoard(board) {
   for (var i = 0; i < board.length; i+=1) {
-  	if(board[i]) {
-  		board[i].state = "empty";
-  	} 
-  	else {
-      	board[i] = new gameSquare("empty");
-  	}
+  	board[i] = "empty";
    }
     return board;
 };
@@ -91,7 +82,7 @@ function startEndGame() {
 			//reset empty buttons with blank space
 			for(var i = 0; i < game_board_squares.length; i+=1){
 	
-				if(game_board_squares[i].state = "empty"){
+				if(game_board_squares[i] = "empty"){
 					$("#game-board button#" + i).replaceWith("<span class='xo'> </span>");
 				}
 			}
@@ -107,7 +98,7 @@ function playGame() {
 
 		var clicked_on_square = event.target.id;
 
-		game_board_squares[clicked_on_square].state = current_mark;
+		game_board_squares[clicked_on_square] = current_mark;
 
 		$(this).replaceWith("<span class='xo'>" + current_mark + "</span>");
 
@@ -146,15 +137,15 @@ function checkForWinner() {
 
 		//check to see if all three have either a 'O' or an 'X'
 		// since I am using a zero-based id for matching the pattern, will need to move down by 1
-		if(game_board_squares[winner[0] - 1].state == 'O'
-			 && game_board_squares[winner[1] - 1].state == 'O'
-			 && game_board_squares[winner[2] - 1].state == 'O') {
+		if(game_board_squares[winner[0] - 1] == 'O'
+			 && game_board_squares[winner[1] - 1] == 'O'
+			 && game_board_squares[winner[2] - 1] == 'O') {
 
 			winning_player = player_o;
 		} 
-		else if(game_board_squares[winner[0] - 1].state == 'X' 
-			&& game_board_squares[winner[1] - 1].state == 'X'
-			&& game_board_squares[winner[2] - 1].state == 'X') {
+		else if(game_board_squares[winner[0] - 1] == 'X' 
+			&& game_board_squares[winner[1] - 1] == 'X'
+			&& game_board_squares[winner[2] - 1] == 'X') {
 
 			winning_player = player_x;
 		}
