@@ -1,3 +1,5 @@
+'use strict';
+
 //global variables
 var board_size          = 3,
     game_board_squares  = new Array(board_size * board_size),
