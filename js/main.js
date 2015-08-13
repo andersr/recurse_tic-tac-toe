@@ -87,7 +87,7 @@ function startEndGame() {
 			}
 
 			//reset empty buttons with blank space
-			for(var i = 0, l = game_board_squares.length; i < l; i++){
+			for(var i = 0; i < game_board_squares.length; i+=1){
 	
 				if(game_board_squares[i].state = "empty"){
 					$("#game-board button#" + i).replaceWith("<span class='xo'> </span>");
@@ -137,7 +137,7 @@ function checkForWinner() {
 
 
 	//loop through all 3x3 winning patterns
-	for(var i = 0, l = winners_3x3.length; i < l; i++){
+	for(var i = 0; i < winners_3x3.length; i+=1){
 
 		// assign a winning pattern(array) to winner
 		var winner = winners_3x3[i];
