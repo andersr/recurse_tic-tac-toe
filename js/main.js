@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 //global variables
 var board_size          = 3,
     game_board_squares  = new Array(board_size * board_size),
@@ -90,13 +88,13 @@ var Ttt = {
 			if (winning_player){
 				Ttt.startEndGame();
 			}
-			else if(remaining_moves == 0) {
+			else if(Ttt.remaining_moves == 0) {
 
 				winning_player = 'tie';
 				Ttt.startEndGame();
 			}
 			else {
-				remaining_moves -= 1;
+				Ttt.remaining_moves -= 1;
 				Ttt.switchPlayer();
 			}		
 		});
