@@ -15,7 +15,7 @@ function gameSquare(state) {
   this.state = state;
 };
 function createEmptyGameBoard(board) {
-  for (var i = 0, l = board.length; i < l; i++) {
+  for (var i = 0; i < board.length; i+=1) {
   	if(board[i]) {
   		board[i].state = "empty";
   	} 
