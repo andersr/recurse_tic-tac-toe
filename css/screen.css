@@ -1,0 +1,70 @@
+
+/* ==========================================================================
+   Tic Tac Toe Styles
+   ========================================================================== */
+body {
+  padding: 1em;
+  font-size: 100%;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+input, label, button {
+  font-size: 1.3em;
+}
+
+input[type="text"] {
+  width:15em;
+
+}
+
+button {
+  cursor:pointer;
+}
+
+button#quit-game {
+  font-size: .7em;
+  color:#666;
+   background-color:#e8e7e9;
+ border-color: #e8e7e9;
+}
+
+#game-board {
+//width:100%;
+}
+#game-board td {
+border:1px solid #ccc;
+height:5em;
+width:5em;
+vertical-align: middle;
+text-align: center;
+}
+
+#game-board .xo {
+font-family: 'Permanent Marker', Papyrus, fantasy;
+font-size: 3em;
+}
+
+#game-board .empty-square {
+ width:100%;
+ height:100%;
+ background-color: transparent;
+ border-color: transparent;
+}
+
+.hide {
+display:none;
+}
+
+.show {
+display:block;
+}
+
+@media only screen and (max-width : 480px) {
+
+  input {
+    width:80%;
+  }
+
+
+}
+

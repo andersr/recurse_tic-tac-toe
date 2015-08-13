@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Let's Play Tic Tac Toe!</title>
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+  <header>
+    <h1 id="alerts"><span>Let's Play Tic Tac Toe!</span></h1>
+  </header>
+  <section id="game-setup">
+  <p><label for="player_x_name">Player 'X' name:</label><br><input id="player_x_name" name="player_x_name" type="text"  placeholder="If blank, you'll be 'Player X'"></p>
+    <p><label for="player_o_name">Player 'O' name:</label><br><input id="player_o_name" name="player_o_name" type="text"  placeholder="If blank, you'll be 'Player O'"></p>
+    <button id="start-game">Play Game</button>
+  </section>
+  <section id="play-game" class="hide">
+    <table id="game-board" border="0" cellspacing="0" cellpadding="1">
+      <tr>
+        <td><button id="0" class="empty-square">&nbsp;</button></td>
+        <td><button id="1" class="empty-square">&nbsp;</button></td>
+        <td><button id="2" class="empty-square">&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td><button id="3" class="empty-square">&nbsp;</button></td>
+        <td><button id="4" class="empty-square">&nbsp;</button></td>
+        <td><button id="5" class="empty-square">&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td><button id="6" class="empty-square">&nbsp;</button></td>
+        <td><button id="7" class="empty-square">&nbsp;</button></td>
+        <td><button id="8" class="empty-square">&nbsp;</button></td>
+      </tr>
+    </table>
+      <p id="play-again" class="hide"><button>Play again?</button></p>
+    <p><button id="quit-game">Quit</button></p>
+  </section>
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
