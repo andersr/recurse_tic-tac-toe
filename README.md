@@ -1,3 +1,3 @@
 # Tic Tac Toe Game
 
-A Tic Toe Game I wrote for a school application.
+A Tic Tac Toe Game I wrote for a school application.
